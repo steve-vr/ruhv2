@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+  <div id="ruhv2" class="ruhv2">
+    <header class="header">
+      <div class="header__logo">
+        <img src="https://ret.universalhorse.club/betuniversal/assets/retailv2/images/logo-universal.png" alt="logo-universal">
+      </div>
+      <div class="header__options">
+        <button class="btn option">Reimprimir</button>
+        <button class="btn option">Lista de usuarios</button>
+        <button class="btn option">Autoservicios</button>
+        <button class="btn option">Cuadre de caja</button>
+        <button class="btn option">Apuestas realizadas</button>
+        <button class="btn option">Recargar</button>
+        <div class="ss">
+          <div class="header__text--input">Verificar ticket</div>
+          <input type="text" class="input" placeholder="Código">
+        </div>
+        <div class="ss">
+          <div class="header__text--input">Cod.Agente</div>
+          <div class="">1233-1234</div>
+        </div>
+      </div>
+      <div class="header__options">
+        <div class="ss">
+          <div class="header__text--input"><span>Usuario</span> #12313</div>
+          <div class="">cjlatinsport24</div>
+        </div>
+        <div class="ss">
+          <div class="header__text--input"><span>Saldo :</span></div>
+          <div class="">123123 USD</div>
+        </div>
+        <!--select class="input pais" name="" id="">
+          <option value="" selected>ES</option>
+          <option value="">EN</option>
+        </select-->
+      </div>
+      
+    </header>
+    <main class="main">
+      <section >
+       
+        <div class="main__left">
+          <div class="">
+            <div class="btn race"><div>21</div><img src="https://www.universalhorse.club/img/iconos/caballos001.png" alt=""></div>
+            <div class="btn race"><div>21</div><img src="https://www.universalhorse.club/img/iconos/galgo01.png" alt=""></div>
+            <div class="btn race"><div>21</div><img src="https://www.universalhorse.club/img/iconos/carreta01.png" alt=""></div>
+            <div class="btn race"><img src="https://www.universalhorse.club/img/iconos/jackpolla01.png" alt=""></div>
+            <div class="btn race"><img src="https://www.universalhorse.club/img/iconos/reloj01.png" alt=""><div>{{hour}}</div></div>
+            <div class="btn race"><img src="https://www.universalhorse.club/img/iconos/caballos_retirado.png" alt=""><div>Retirados</div></div>
+            <div class="btn race"><img src="https://www.universalhorse.club/img/iconos/resultados.png" alt=""><div>Programas</div></div>
+            <div class="btn race"><img src="https://www.universalhorse.club/img/iconos/engranaje01.png" alt=""><div>Resultados</div></div>
+            <div class="btn race"><img src="https://www.universalhorse.club/img/iconos/engranaje01.png" alt=""></div>
+          </div>
+          <div class="">
+            <input type="text" class="input" placeholder="Buscar carrera">
+            <div>Filtro</div>
+            <div>
+              <button class="btn slide">
+                <img src="https://ret.universalhorse.club/img/Banderas/usa.png" alt="">
+                <div>Estados Unidos</div>
+                <div class="slide-circle">2</div>
+              </button>
+              <button class="btn slide">
+                <img src="https://ret.universalhorse.club/img/Banderas/usa.png" alt="">
+                <div>Estados Unidos</div>
+                <div class="slide-circle">22</div>
+              </button>
+              <button class="btn slide">
+                <img src="https://ret.universalhorse.club/img/Banderas/usa.png" alt="">
+                <div>Estados Unidos</div>
+                <div class="slide-circle">2</div>
+              </button>
+              <button class="btn slide">
+                <img src="https://ret.universalhorse.club/img/Banderas/usa.png" alt="">
+                <div>Estados Unidos</div>
+                <div class="slide-circle">8</div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <div>Limite de apuestas(USD )</div>
+          <div class="limit-ap">
+            <div>Hawkesbury</div>
+            <div>Race</div>
+            <div>1</div>
+            <div>W/P/S</div>
+            <div>1</div>
+            <div>100</div>
+            <div>Exotica</div>
+            <div>1</div>
+            <div>20</div>
+          </div>
+          <div>
+            <div>Monto máximo de pago por carrera:</div>
+            <div>0.00</div>
+          </div>
+        </div>
+      </section>
+      <div>
+        <div>Carreras por comenzar</div>
+      </div>
+      <div>
+        <div class="talon">Talón de apuestas</div>
+        <div class="t-apuestas"></div>  
+        <div>Número de apuestas <span>0</span></div>
+        <div>Total : <span>0</span></div>
+        <button class="btn">Apostar</button>
+      </div>
+    </main>
+  </div>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script>
+    const { createApp } = Vue
+  
+    createApp({
+      data() {
+        return {
+          hour : '--:--:--',
+        }
+      },
+      methods:{
+        getCurrentTime(){
+            let hour = new Date();
+            ss = hour.getSeconds() + '';
+            mm = hour.getMinutes() + ''; 
+            hh = hour.getHours() + '';
+            this.hour = hh.padStart(2, '0') +':'+mm.padStart(2, '0')+':'+ss.padStart(2, '0');
+        },
+      },
+      mounted(){
+        setInterval(() => { this.getCurrentTime(); }, 1000);
+      }
+    }).mount('#ruhv2')
+  </script>
+</body>
+</html>
