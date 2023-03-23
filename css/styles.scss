@@ -33,7 +33,6 @@
             background-color: #4e4e4e;
         }
         &.race{
-     
             height: 4rem;
             padding: 0.25rem;
             font-size: 10px;
@@ -41,6 +40,9 @@
             justify-items: center;
             align-items: center;
             background: linear-gradient(45deg, rgba(19,19,19,1) 0%, rgba(68,68,68,1) 65%, rgba(76,76,76,1) 100%);
+            &.active{
+                background: linear-gradient(45deg, #81007a, #cd0086);;
+            }
         }
         &.slide{
             display: grid;

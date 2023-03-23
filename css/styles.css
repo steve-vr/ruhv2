@@ -95,6 +95,9 @@
   align-items: center;
   background: linear-gradient(45deg, rgb(19, 19, 19) 0%, rgb(68, 68, 68) 65%, rgb(76, 76, 76) 100%);
 }
+.ruhv2 .btn.race.active {
+  background: linear-gradient(45deg, #81007a, #cd0086);
+}
 .ruhv2 .btn.slide {
   display: grid;
   grid-template-columns: 30% 60% 10%;
