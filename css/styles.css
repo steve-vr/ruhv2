@@ -232,7 +232,8 @@
   width: 100%;
   text-align: justify;
 }
-.ruhv2 .modal {
+
+.modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -244,20 +245,20 @@
   overflow-y: auto;
   outline: 0;
 }
-.ruhv2 .modal-dialog {
+.modal-dialog {
   position: relative;
   pointer-events: none;
   max-width: 550px;
   margin: 3rem auto;
 }
-.ruhv2 .modal.fade, .ruhv2 .modal-dialog {
+.modal.fade, .modal-dialog {
   transition: transform 0.3s ease-out;
   transform: translate(0, -50px);
 }
-.ruhv2 .modal.show, .ruhv2 .modal-dialog {
+.modal.show, .modal-dialog {
   transform: none;
 }
-.ruhv2 .modal-content {
+.modal-content {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -269,7 +270,7 @@
   border-radius: 0.3rem;
   outline: 0;
 }
-.ruhv2 .modal-header {
+.modal-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -280,12 +281,12 @@
   font-size: 18px;
   font-weight: 500;
 }
-.ruhv2 .modal-body {
+.modal-body {
   position: relative;
   flex: 1 1 auto;
   padding: 1rem;
 }
-.ruhv2-backdrop {
+.modal-backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -294,10 +295,10 @@
   height: 100vh;
   background-color: #000;
 }
-.ruhv2-backdrop.fade {
+.modal-backdrop.fade {
   opacity: 0;
 }
-.ruhv2-backdrop.show {
+.modal-backdrop.show {
   opacity: 0.5;
 }
 

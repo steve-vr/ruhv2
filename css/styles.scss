@@ -168,6 +168,7 @@
         width: 100%;
         text-align: justify;
     }
+}
 .modal{
     position: fixed;
     top: 0;
@@ -220,7 +221,6 @@
         flex: 1 1 auto;
         padding: 1rem;
     }
-}
     &-backdrop{
         position: fixed;
         top: 0;
