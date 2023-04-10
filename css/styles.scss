@@ -38,6 +38,9 @@
         }
     }
     .btn{
+        &.notification{
+            position: relative;
+        }
         &.option{
             @extend %f-aic__c;
             height: 2.5rem;

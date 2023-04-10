@@ -116,6 +116,9 @@
 .ruhv2 .header .currency {
   color: red;
 }
+.ruhv2 .btn.notification {
+  position: relative;
+}
 .ruhv2 .btn.option {
   height: 2.5rem;
   background-color: #4e4e4e;
