@@ -285,12 +285,6 @@
   flex: 1 1 auto;
   padding: 1rem;
 }
-.ruhv2 .fade {
-  transition: opacity 0.15s linear;
-}
-.ruhv2 .fade:not(.show) {
-  opacity: 0;
-}
 
 .modal-backdrop {
   position: fixed;
@@ -306,4 +300,11 @@
 }
 .modal-backdrop.show {
   opacity: 0.5;
+}
+
+.fade {
+  transition: opacity 0.15s linear;
+}
+.fade:not(.show) {
+  opacity: 0;
 }/*# sourceMappingURL=styles.css.map */

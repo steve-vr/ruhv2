@@ -223,12 +223,7 @@
             padding: 1rem;
         }
     }
-    .fade {
-        transition: opacity .15s linear;
-        &:not(.show) {
-            opacity: 0;
-        }
-    }
+
 }
 .modal{
     &-backdrop{
@@ -245,5 +240,11 @@
         &.show {
             opacity: 0.5;
         }
+    }
+}
+.fade {
+    transition: opacity .15s linear;
+    &:not(.show) {
+        opacity: 0;
     }
 }
