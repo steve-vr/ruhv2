@@ -228,6 +228,10 @@
 .ruhv2 .autoservice .btn.delete {
   background-color: #dc3545;
 }
+.ruhv2 .autoservice__users {
+  max-height: calc(79vh - 3rem);
+  overflow: auto;
+}
 .ruhv2 .table {
   width: 100%;
   text-align: justify;

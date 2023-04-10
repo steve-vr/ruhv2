@@ -163,6 +163,10 @@
             background-color: #dc3545;
           }
         }
+        &__users{
+            max-height: calc(79vh - 3rem);
+            overflow: auto;
+        }
     }
     .table{
         width: 100%;
