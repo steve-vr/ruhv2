@@ -141,7 +141,7 @@
     }
     //modales config
     .autoservice{
-        & .options{
+        &__options{
             display: grid;
             grid-template-columns: 2.5rem 2.5rem;
             gap: 0.5rem;

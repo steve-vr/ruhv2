@@ -206,7 +206,7 @@
   min-height: 60vh;
   background-color: #444444;
 }
-.ruhv2 .autoservice .options {
+.ruhv2 .autoservice__options {
   display: grid;
   grid-template-columns: 2.5rem 2.5rem;
   gap: 0.5rem;
