@@ -40,6 +40,15 @@
     .btn{
         &.notification{
             position: relative;
+            & .autoservice{
+                position: absolute;
+                top: 3px;
+                border: 1px solid red;
+                border-radius: 100%;
+                min-width: 18px;
+                font-size: 12px;
+                right: 3px;
+            }
         }
         &.option{
             @extend %f-aic__c;

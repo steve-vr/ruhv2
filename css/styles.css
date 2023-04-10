@@ -119,6 +119,15 @@
 .ruhv2 .btn.notification {
   position: relative;
 }
+.ruhv2 .btn.notification .autoservice {
+  position: absolute;
+  top: 3px;
+  border: 1px solid red;
+  border-radius: 100%;
+  min-width: 18px;
+  font-size: 12px;
+  right: 3px;
+}
 .ruhv2 .btn.option {
   height: 2.5rem;
   background-color: #4e4e4e;
