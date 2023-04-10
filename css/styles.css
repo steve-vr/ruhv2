@@ -172,9 +172,6 @@
 .ruhv2 .input.pais {
   width: auto;
 }
-.ruhv2 .ss {
-  width: 100%;
-}
 .ruhv2 .main {
   display: grid;
   grid-template-columns: 20% 60% 20%;
@@ -208,4 +205,16 @@
 .ruhv2 .t-apuestas {
   min-height: 60vh;
   background-color: #444444;
+}
+.ruhv2 .autoservice .options {
+  display: grid;
+  grid-template-columns: 2.5rem 2.5rem;
+  gap: 0.5rem;
+  justify-content: end;
+}
+.ruhv2 .autoservice .btn.reload {
+  background-color: #007bff;
+}
+.ruhv2 .autoservice .btn.delete {
+  background-color: #dc3545;
 }/*# sourceMappingURL=styles.css.map */
