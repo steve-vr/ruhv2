@@ -285,8 +285,7 @@
   flex: 1 1 auto;
   padding: 1rem;
 }
-
-.modal-backdrop {
+.ruhv2-backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -295,10 +294,10 @@
   height: 100vh;
   background-color: #000;
 }
-.modal-backdrop.fade {
+.ruhv2-backdrop.fade {
   opacity: 0;
 }
-.modal-backdrop.show {
+.ruhv2-backdrop.show {
   opacity: 0.5;
 }
 
