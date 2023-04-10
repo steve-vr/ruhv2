@@ -136,16 +136,32 @@
 }
 
 %input{
-    //@extend %form;
-    border: none;
-    background-color: #252525;
+    font-size: inherit;
+    font-family: inherit;
+    border: #{$border-btn};
+    background-color: $bgc-ipt;
     width: 100%;
-    padding: 0.375rem 0.75rem;
+    border-radius: #{$borderR-btn};
+    padding: 0.5rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    //&:focus{
-    //    @extend %input;
-    //    box-shadow: var(--shadow-input);
-    //}
+    &:focus{
+        @extend %input;
+        box-shadow: 0 0 0 0.1rem lighten($bgc-ipt, 12%);//esto cambia por color primarui
+        border: 1px solid transparent;
+    }   
+    &::placeholder {
+        color: $placeholder-color;
+    }
+    //@extend %disabled;
+}
+
+%iptNumber{
+    &[type=number]::-webkit-inner-spin-button, 
+    &[type=number]::-webkit-outer-spin-button { 
+        -webkit-appearance: none; 
+        margin: 0; 
+    }
+    &[type=number] { -moz-appearance:textfield; }
 }
 //select{
 //    @extend %btn;
