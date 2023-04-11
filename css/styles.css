@@ -232,6 +232,11 @@
   max-height: calc(79vh - 3rem);
   overflow: auto;
 }
+.ruhv2 .userticket__data {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 0.25rem;
+}
 .ruhv2 .table {
   width: 100%;
   text-align: justify;

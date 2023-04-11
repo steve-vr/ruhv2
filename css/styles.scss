@@ -168,6 +168,13 @@
             overflow: auto;
         }
     }
+    .userticket{
+        &__data{
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 0.25rem;
+        }
+    }
     .table{
         width: 100%;
         text-align: justify;
