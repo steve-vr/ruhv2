@@ -236,6 +236,11 @@
   width: 100%;
   text-align: justify;
 }
+.ruhv2 .table.scroll thead {
+  position: sticky;
+  top: 0;
+  background: #252525;
+}
 
 .modal {
   position: fixed;
