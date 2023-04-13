@@ -98,8 +98,9 @@
         &.date{
             @include iptDate("dark");
             background-color: #7e7e7e;
-            padding: 0.4rem;
+            padding: 0.35rem 0.5rem;
         }
+        @include searchIpt(#252525,inherit,inherit);
     }
     .slide-circle{
         border-radius: 100%;
@@ -110,12 +111,12 @@
         align-items: center;
         justify-content: center;
     }
-    .input{
-        @extend %input;
-        &.pais{
-            width: auto;
-        }
-    }
+    //.input{
+    //    @extend %input;
+    //    &.pais{
+    //        width: auto;
+    //    }
+    //}
     .main{
         display: grid;
         grid-template-columns: 20% 60% 20%; 
@@ -243,17 +244,28 @@
             &-dialog{
                 max-width: 850px;
             }
+            &-body{
+                display: grid;
+                gap: 0.5rem;
+            }
         }
-        &__search-status{
+        &__search{
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            gap: 0.5rem;
-            background: #3c3c3c;
-            border-radius: 0.25rem;
-            padding: 0.5rem;
+            grid-template-columns: 1fr 12rem;
+            &-status{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 7rem;
+                gap: 0.5rem;
+                background: #3c3c3c;
+                border-radius: 0.25rem;
+                padding: 0.5rem;
+            }
         }
+       
         & .btn{
-            width:  2.5rem;
+            &.view,&.print{
+                width:  2.5rem;
+            }
             &.consult{
                 background-color: #007a00;
             }

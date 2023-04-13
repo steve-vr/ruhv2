@@ -22,7 +22,7 @@
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.ruhv2 .input, .ruhv2 .ipt {
+.ruhv2 .ipt {
   font-size: inherit;
   font-family: inherit;
   border: 1px solid transparent;
@@ -32,14 +32,14 @@
   padding: 0.5rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
-.ruhv2 .input:focus, .ruhv2 .ipt:focus {
+.ruhv2 .ipt:focus {
   box-shadow: 0 0 0 0.1rem #444444;
   border: 1px solid transparent;
 }
-.ruhv2 .input::-moz-placeholder, .ruhv2 .ipt::-moz-placeholder {
+.ruhv2 .ipt::-moz-placeholder {
   color: rgb(133, 133, 133);
 }
-.ruhv2 .input::placeholder, .ruhv2 .ipt::placeholder {
+.ruhv2 .ipt::placeholder {
   color: rgb(133, 133, 133);
 }
 
@@ -180,7 +180,7 @@
 }
 .ruhv2 .ipt.date {
   background-color: #7e7e7e;
-  padding: 0.4rem;
+  padding: 0.35rem 0.5rem;
 }
 .ruhv2 .ipt.date[type=date] {
   min-width: 100%;
@@ -192,6 +192,19 @@
 .ruhv2 .ipt.date[type=date]::-webkit-calendar-picker-indicator {
   filter: invert(100%) sepia(93%) saturate(0%) hue-rotate(127deg) brightness(102%) contrast(102%);
 }
+.ruhv2 .ipt.search {
+  background-color: #252525;
+  width: inherit;
+  color: inherit;
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><circle cx='11' cy='11' r='7' fill='none' stroke='%23fff' stroke-width='2'/><line x1='20' y1='23' x2='15' y2='17' stroke='%23fff' stroke-width='2'/></svg>");
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  padding-right: 2rem;
+  background-position: right 0.5rem center;
+}
+.ruhv2 .ipt.search:focus {
+  box-shadow: 0 0 0 0.1rem #464646;
+}
 .ruhv2 .slide-circle {
   border-radius: 100%;
   width: 1.5rem;
@@ -200,9 +213,6 @@
   background-color: #646464;
   align-items: center;
   justify-content: center;
-}
-.ruhv2 .input.pais {
-  width: auto;
 }
 .ruhv2 .main {
   display: grid;
@@ -315,15 +325,23 @@
 .ruhv2 .betsplaced .modal-dialog {
   max-width: 850px;
 }
+.ruhv2 .betsplaced .modal-body {
+  display: grid;
+  gap: 0.5rem;
+}
+.ruhv2 .betsplaced__search {
+  display: grid;
+  grid-template-columns: 1fr 12rem;
+}
 .ruhv2 .betsplaced__search-status {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 7rem;
   gap: 0.5rem;
   background: #3c3c3c;
   border-radius: 0.25rem;
   padding: 0.5rem;
 }
-.ruhv2 .betsplaced .btn {
+.ruhv2 .betsplaced .btn.view, .ruhv2 .betsplaced .btn.print {
   width: 2.5rem;
 }
 .ruhv2 .betsplaced .btn.consult {
