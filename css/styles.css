@@ -178,6 +178,10 @@
   border-radius: 0;
   padding: 0 0.5rem;
 }
+.ruhv2 .ipt.date {
+  background-color: #7e7e7e;
+  padding: 0.4rem;
+}
 .ruhv2 .ipt.date[type=date] {
   min-width: 100%;
   -webkit-appearance: none;

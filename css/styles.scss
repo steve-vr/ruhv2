@@ -97,6 +97,8 @@
         }
         &.date{
             @include iptDate("dark");
+            background-color: #7e7e7e;
+            padding: 0.4rem;
         }
     }
     .slide-circle{
