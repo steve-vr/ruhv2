@@ -337,7 +337,7 @@
 .ruhv2 .betsplaced .status.canceled {
   background-color: #6007d3;
 }
-.ruhv2 .betsplaced .status.lose {
+.ruhv2 .betsplaced .status.lost {
   background-color: #cc0a0a;
 }
 .ruhv2 .betsplaced .status.unpaid {
