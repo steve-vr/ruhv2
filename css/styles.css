@@ -307,6 +307,26 @@
 .ruhv2 .betsplaced .status {
   padding: 0.5rem;
   border-radius: 0.25rem;
+  font-weight: 500;
+  text-align: center;
+}
+.ruhv2 .betsplaced .status.in-progress {
+  background-color: #d9ab24;
+}
+.ruhv2 .betsplaced .status.canceled {
+  background-color: #6007d3;
+}
+.ruhv2 .betsplaced .status.lose {
+  background-color: #cc0a0a;
+}
+.ruhv2 .betsplaced .status.un-paid {
+  background-color: #0c72c9;
+}
+.ruhv2 .betsplaced .status.paid {
+  background-color: green;
+}
+.ruhv2 .betsplaced .status.refund {
+  background-color: #81007a;
 }
 .ruhv2 .table {
   width: 100%;
