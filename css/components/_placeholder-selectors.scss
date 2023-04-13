@@ -163,6 +163,24 @@
     }
     &[type=number] { -moz-appearance:textfield; }
 }
+@mixin iptDate($theme){
+    &[type=date] {
+        min-width: 100%;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        position: relative
+    }
+
+    &[type=date]::-webkit-calendar-picker-indicator {
+        @if($theme == "light"){
+            filter: invert(68%) sepia(11%) saturate(12%) hue-rotate(322deg) brightness(87%) contrast(91%)
+        }@else{
+            filter: invert(100%) sepia(93%) saturate(0%) hue-rotate(127deg) brightness(102%) contrast(102%);
+        }
+    }
+}
+
 %select{
     @extend %btn;
     background-image: url("#{$arrow-down}");

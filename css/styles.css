@@ -75,16 +75,6 @@
 .ruhv2 * {
   color: #fff;
 }
-.ruhv2 .ipt[type=date] {
-  min-width: 100%;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  position: relative;
-}
-.ruhv2 .ipt[type=date]::-webkit-calendar-picker-indicator {
-  filter: invert(68%) sepia(11%) saturate(12%) hue-rotate(322deg) brightness(87%) contrast(91%);
-}
 .ruhv2 :focus, .ruhv2 :focus-visible {
   outline: 0;
 }
@@ -187,6 +177,16 @@
 .ruhv2 .ipt.data {
   border-radius: 0;
   padding: 0 0.5rem;
+}
+.ruhv2 .ipt.date[type=date] {
+  min-width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+}
+.ruhv2 .ipt.date[type=date]::-webkit-calendar-picker-indicator {
+  filter: invert(100%) sepia(93%) saturate(0%) hue-rotate(127deg) brightness(102%) contrast(102%);
 }
 .ruhv2 .slide-circle {
   border-radius: 100%;
