@@ -7,11 +7,11 @@
 .ruhv2 .btn.option, .ruhv2 .header__logo {
   justify-content: center;
 }
-.ruhv2 .btn:hover {
+.ruhv2 .btn:hover, .ruhv2 .slc:hover {
   filter: brightness(0.9);
 }
 
-.ruhv2 .btn {
+.ruhv2 .btn, .ruhv2 .slc {
   cursor: pointer;
   font-size: inherit;
   width: 100%;
@@ -49,6 +49,16 @@
 }
 .ruhv2 [type=number].ipt.data {
   -moz-appearance: textfield;
+}
+
+.ruhv2 .slc {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 14px 14px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 *,
@@ -228,14 +238,75 @@
 .ruhv2 .autoservice .btn.delete {
   background-color: #dc3545;
 }
+.ruhv2 .autoservice__count {
+  position: absolute;
+  top: 3px;
+  border: 1px solid red;
+  border-radius: 100%;
+  width: 18px;
+  background-color: transparent;
+  font-size: 12px;
+  right: 3px;
+  pointer-events: none;
+  padding: 0;
+  text-align: center;
+}
 .ruhv2 .autoservice__users {
-  max-height: calc(79vh - 3rem);
   overflow: auto;
+}
+.ruhv2 .autoservice .modal-body {
+  display: grid;
+  gap: 0.5rem;
+  max-height: 80vh;
 }
 .ruhv2 .userticket__data {
   display: grid;
   grid-template-columns: auto auto;
+  align-items: center;
   gap: 0.25rem;
+}
+.ruhv2 .userticket__betinfo {
+  display: grid;
+  gap: 0.25rem;
+  grid-template-columns: repeat(3, auto);
+  justify-content: space-around;
+}
+.ruhv2 .userticket__player {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+.ruhv2 .userticket__codebar {
+  display: flex;
+  justify-content: center;
+}
+.ruhv2 .userticket__codebar img {
+  width: 60%;
+}
+.ruhv2 .userticket .modal-dialog {
+  display: flex;
+  align-items: center;
+  min-height: calc(100% - 6rem);
+  max-width: 400px;
+}
+.ruhv2 .userticket .modal-header {
+  text-transform: uppercase;
+}
+.ruhv2 .userticket .modal-body {
+  display: grid;
+  gap: 1rem;
+}
+.ruhv2 .userticket .modal-footer {
+  padding: 0 1rem 1rem;
+}
+.ruhv2 .betsplaced .modal-dialog {
+  max-width: 850px;
+}
+.ruhv2 .betsplaced .btn {
+  width: 2.5rem;
+}
+.ruhv2 .betsplaced .status {
+  padding: 0.5rem;
+  border-radius: 0.25rem;
 }
 .ruhv2 .table {
   width: 100%;

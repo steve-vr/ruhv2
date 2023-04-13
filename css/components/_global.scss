@@ -18,6 +18,9 @@
     .ipt{
         @extend %input;
     }
+    .slc{
+        @extend %select;
+    }
     // a, link, input, button, select, textarea e iframe.
     :focus, :focus-visible{
         outline: 0;
