@@ -17,6 +17,17 @@
     }
     .ipt{
         @extend %input;
+        &[type=date] {
+            min-width: 100%;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            position: relative
+        }
+
+        &[type=date]::-webkit-calendar-picker-indicator {
+          filter: invert(68%) sepia(11%) saturate(12%) hue-rotate(322deg) brightness(87%) contrast(91%)
+        }
     }
     .slc{
         @extend %select;

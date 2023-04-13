@@ -239,8 +239,19 @@
                 max-width: 850px;
             }
         }
+        &__search-status{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 0.5rem;
+            background: #3c3c3c;
+            border-radius: 0.25rem;
+            padding: 0.5rem;
+        }
         & .btn{
             width:  2.5rem;
+            &.consult{
+                background-color: #007a00;
+            }
         }
         & .status{
             padding: 0.5rem;
