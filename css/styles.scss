@@ -267,7 +267,10 @@
             &.view,&.print{
                 width:  2.5rem;
             }
-            &.consult{
+            &.consult{ 
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
                 background-color: #007a00;
             }
         }
