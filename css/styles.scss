@@ -255,6 +255,7 @@
             &-status{
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr 7rem;
+                align-items: end;
                 gap: 0.5rem;
                 background: #3c3c3c;
                 border-radius: 0.25rem;
