@@ -465,6 +465,7 @@
 .modal-body {
   display: grid;
   gap: 0.5rem;
+  padding: 1rem;
 }
 .modal-backdrop {
   position: fixed;
