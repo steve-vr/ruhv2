@@ -93,7 +93,6 @@
         &.data{
             border-radius: 0;
             padding: 0 0.5rem;
-            @extend %iptNumber;
         }
         &.date{
             @include iptDate("dark");
@@ -187,14 +186,16 @@
         }
         & .modal{
             &-body{
-                display: grid;
-                gap: 0.5rem;
                 max-height: 80vh;
             }
         }
 
     }
     .userticket{
+        &__ticket{
+            display:grid;
+            gap:1rem;
+        }
         &__data{
             display: grid;
             grid-template-columns: auto auto;
@@ -226,13 +227,6 @@
                 min-height: calc(100% - (3rem * 2));
                 max-width: 400px;
             }
-            &-header{
-                text-transform:uppercase;
-            }
-            &-body{
-                display: grid;
-                gap: 1rem;
-            }
             &-footer{
                 padding:0 1rem 1rem;
             }
@@ -243,10 +237,6 @@
         & .modal{
             &-dialog{
                 max-width: 850px;
-            }
-            &-body{
-                display: grid;
-                gap: 0.5rem;
             }
         }
         &__search{
@@ -299,6 +289,17 @@
             }
         }
     }
+    .serialvalidation{
+        & .modal{
+            &-dialog{
+                max-width: 400px;
+            }
+            &-body{
+                grid-template-columns: 1fr 6rem;
+            }
+        }
+
+    }
     .table{
         width: 100%;
         text-align: justify;
@@ -321,6 +322,33 @@
         border-color: inherit;
           border-style: solid;
           border-width: 0;
+    }
+    //spinenr animted
+    .load{
+        display: flex;
+        justify-content: center;
+    }
+    .spinner {
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        vertical-align: -0.125em;
+        border: 0.25em solid currentColor;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: .75s linear infinite spinner-default;
+        animation: .75s linear infinite spinner-default;
+    }
+    @-webkit-keyframes spinner-default {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    
+    @keyframes spinner-default {
+      to {
+        transform: rotate(360deg);
+      }
     }
 }
 
@@ -366,6 +394,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        text-transform:uppercase;
         color: #d5d5d5;
         background-color: transparent;
         border-bottom: 1px solid #6d6d6d;
@@ -373,10 +402,9 @@
         font-size: 18px;
         font-weight: 500;
     }
-    &-body {
-        position: relative;
-        flex: 1 1 auto;
-        padding: 1rem;
+    &-body{
+        display: grid;
+        gap: 0.5rem;
     }
     &-backdrop {
         position: fixed;

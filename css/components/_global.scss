@@ -17,6 +17,7 @@
     }
     .ipt{
         @extend %input;
+        @extend %iptNumber;
     }
     .slc{
         @extend %select;

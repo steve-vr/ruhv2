@@ -43,11 +43,11 @@
   color: rgb(133, 133, 133);
 }
 
-.ruhv2 [type=number].ipt.data::-webkit-inner-spin-button, .ruhv2 [type=number].ipt.data::-webkit-outer-spin-button {
+.ruhv2 [type=number].ipt::-webkit-inner-spin-button, .ruhv2 [type=number].ipt::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-.ruhv2 [type=number].ipt.data {
+.ruhv2 [type=number].ipt {
   -moz-appearance: textfield;
 }
 
@@ -279,9 +279,11 @@
   overflow: auto;
 }
 .ruhv2 .autoservice .modal-body {
-  display: grid;
-  gap: 0.5rem;
   max-height: 80vh;
+}
+.ruhv2 .userticket__ticket {
+  display: grid;
+  gap: 1rem;
 }
 .ruhv2 .userticket__data {
   display: grid;
@@ -312,22 +314,11 @@
   min-height: calc(100% - 6rem);
   max-width: 400px;
 }
-.ruhv2 .userticket .modal-header {
-  text-transform: uppercase;
-}
-.ruhv2 .userticket .modal-body {
-  display: grid;
-  gap: 1rem;
-}
 .ruhv2 .userticket .modal-footer {
   padding: 0 1rem 1rem;
 }
 .ruhv2 .betsplaced .modal-dialog {
   max-width: 850px;
-}
-.ruhv2 .betsplaced .modal-body {
-  display: grid;
-  gap: 0.5rem;
 }
 .ruhv2 .betsplaced__search {
   display: grid;
@@ -375,6 +366,12 @@
 .ruhv2 .betsplaced .status.refund {
   background-color: #81007a;
 }
+.ruhv2 .serialvalidation .modal-dialog {
+  max-width: 400px;
+}
+.ruhv2 .serialvalidation .modal-body {
+  grid-template-columns: 1fr 6rem;
+}
 .ruhv2 .table {
   width: 100%;
   text-align: justify;
@@ -395,6 +392,25 @@
   border-color: inherit;
   border-style: solid;
   border-width: 0;
+}
+.ruhv2 .load {
+  display: flex;
+  justify-content: center;
+}
+.ruhv2 .spinner {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  vertical-align: -0.125em;
+  border: 0.25em solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: 0.75s linear infinite spinner-default;
+}
+@keyframes spinner-default {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .modal {
@@ -438,6 +454,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  text-transform: uppercase;
   color: #d5d5d5;
   background-color: transparent;
   border-bottom: 1px solid #6d6d6d;
@@ -446,9 +463,8 @@
   font-weight: 500;
 }
 .modal-body {
-  position: relative;
-  flex: 1 1 auto;
-  padding: 1rem;
+  display: grid;
+  gap: 0.5rem;
 }
 .modal-backdrop {
   position: fixed;
