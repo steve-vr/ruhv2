@@ -276,10 +276,8 @@
   text-align: center;
 }
 .ruhv2 .autoservice__users {
+  max-height: 70vh;
   overflow: auto;
-}
-.ruhv2 .autoservice .modal-body {
-  max-height: 80vh;
 }
 .ruhv2 .userticket__ticket {
   display: grid;

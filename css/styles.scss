@@ -182,12 +182,8 @@
             text-align: center;
         }
         &__users{
+            max-height: 70vh;
             overflow: auto;
-        }
-        & .modal{
-            &-body{
-                max-height: 80vh;
-            }
         }
 
     }
