@@ -366,10 +366,10 @@
 .ruhv2 .betsplaced .status.refund {
   background-color: #81007a;
 }
-.ruhv2 .serialvalidation .modal-dialog {
+.ruhv2 .validationcode .modal-dialog {
   max-width: 400px;
 }
-.ruhv2 .serialvalidation .modal-body {
+.ruhv2 .validationcode .modal-body {
   grid-template-columns: 1fr 6rem;
 }
 .ruhv2 .table {
