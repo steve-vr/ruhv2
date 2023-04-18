@@ -99,7 +99,7 @@
             background-color: #7e7e7e;
             padding: 0.35rem 0.5rem;
         }
-        @include searchIpt(#252525,inherit,inherit);
+        @include searchIpt(#252525,inherit,100%);
     }
     .slide-circle{
         border-radius: 100%;
