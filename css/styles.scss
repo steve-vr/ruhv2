@@ -4,6 +4,8 @@
 
 //aqui tu colocas cosas espeificas como formas secciones dentro del div etc
 #{$body}{
+    //el scroll lo puedes inclui dentro del body si es por componente o de manera global si no tiene componentes
+    @include scrollDesing(6px,5px,#4e4e4e,#808080);
     //de moneto para no cagarm la visata xd
     height: 100vh;
     .header{
@@ -59,6 +61,7 @@
                 font-size: 18px;
             }
         }
+
         &.race{
             height: 4rem;
             padding: 0.25rem;
@@ -71,15 +74,7 @@
                 background: linear-gradient(45deg, #81007a, #cd0086);;
             }
         }
-        &.slide{
-            display: grid;
-            grid-template-columns: 30% 60% 10%;
-            align-items: center;
-            justify-items: center;
-            background-color: #444444;
-            box-shadow: inset 0px -150px 40px -112px rgba(0,0,0,0.7);
-            height: 3rem;
-        }
+
         &.close{
             width: auto;
             background: transparent;
@@ -101,15 +96,7 @@
         }
         @include searchIpt(#252525,inherit,100%);
     }
-    .slide-circle{
-        border-radius: 100%;
-        width: 1.5rem;
-        height: -webkit-fill-available;
-        display: flex;
-        background-color: #646464;
-        align-items: center;
-        justify-content: center;
-    }
+
     //.input{
     //    @extend %input;
     //    &.pais{
@@ -118,15 +105,12 @@
     //}
     .main{
         display: grid;
-        grid-template-columns: 20% 60% 20%; 
+        grid-template-columns: calc(20% - 0.25rem) 60% calc(20% - 0.25rem); 
         &__left{
             display: grid;
             grid-template-columns: 25% 75%;
         }
 
-        & img{
-            width: 45px;
-        }
     }
     .limit-ap{
         display: grid;
@@ -201,8 +185,14 @@
         &__betinfo{
             display: grid;
             gap: 0.25rem;
-            grid-template-columns: repeat(3,auto);
+            grid-template-columns: repeat(3, auto);
             justify-content: space-around;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid grey;
+        }
+        &__betdata{
+            max-height: 35vh;
+            overflow: auto;
         }
         &__player{
             font-size:1.5rem;
@@ -284,6 +274,10 @@
                 background-color: #81007a;
             }
         }
+        &__table-container{
+            max-height: 60vh;
+            overflow: auto;
+        }
     }
     .codevalidation{
         & .modal{
@@ -296,6 +290,58 @@
         }
 
     }
+    //panel main
+    .racetrack{
+        height:60vh;
+        overflow: auto;
+        &__bycountry{
+            display: grid;
+            grid-template-columns: 25% 60% 15%;
+            align-items: center;
+            justify-items: center;
+            padding: 0 !important;
+            background-color: #444444;
+            box-shadow: inset 0px -150px 40px -112px rgba(0, 0, 0, 0.7);
+            height: 3rem;
+            font-weight: 500;
+        }
+        &__img{
+            width: 2rem;
+        }
+        &__number{
+            border-radius: 1rem;
+            background-color: #646464;
+            width: 1.2rem;
+            text-align: center;
+        }
+        &__event{
+            display: grid;
+            grid-template-columns: 3.7rem 1fr 1.5rem;
+            align-items: center;
+            text-align: center;
+            gap: 0.25rem;
+            padding: 0.25rem;
+            &.title{
+                background-color: #444444;
+            }&.race{
+                background-color: #13181b;
+                cursor:pointer;
+                border-bottom: 1px solid grey;
+                &:hover{
+                    background: linear-gradient(45deg, #81007a, #cd0086);
+                }
+                &__name{
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+            }
+        }
+
+        
+    }
+    //
+
     .table{
         width: 100%;
         text-align: justify;
@@ -346,10 +392,11 @@
         transform: rotate(360deg);
       }
     }
+
 }
 
 
-
+//MODAL GLOBAL
 .modal {
   position: fixed;
   top: 0;
@@ -426,3 +473,14 @@
 .fade:not(.show) {
     opacity: 0;
 }
+//SCROOL DESING
+
+            /*ACORDEON*/
+            .collapsing {
+                height: 0;
+                overflow: hidden;
+                transition: height .35s ease;
+            }
+            .collapse:not(.show) {
+                display: none;
+            }

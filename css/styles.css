@@ -96,6 +96,16 @@
 .ruhv2 {
   height: 100vh;
 }
+.ruhv2 ::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 5px;
+}
+.ruhv2 ::-webkit-scrollbar-track {
+  background: #4e4e4e;
+}
+.ruhv2 ::-webkit-scrollbar-thumb {
+  background: #808080;
+}
 .ruhv2 .header {
   display: grid;
   grid-template-columns: calc(20% - 0.25rem) 60% calc(20% - 0.25rem);
@@ -157,15 +167,6 @@
 .ruhv2 .btn.race.active {
   background: linear-gradient(45deg, #81007a, #cd0086);
 }
-.ruhv2 .btn.slide {
-  display: grid;
-  grid-template-columns: 30% 60% 10%;
-  align-items: center;
-  justify-items: center;
-  background-color: #444444;
-  box-shadow: inset 0px -150px 40px -112px rgba(0, 0, 0, 0.7);
-  height: 3rem;
-}
 .ruhv2 .btn.close {
   width: auto;
   background: transparent;
@@ -205,25 +206,13 @@
 .ruhv2 .ipt.search:focus {
   box-shadow: 0 0 0 0.1rem #464646;
 }
-.ruhv2 .slide-circle {
-  border-radius: 100%;
-  width: 1.5rem;
-  height: -webkit-fill-available;
-  display: flex;
-  background-color: #646464;
-  align-items: center;
-  justify-content: center;
-}
 .ruhv2 .main {
   display: grid;
-  grid-template-columns: 20% 60% 20%;
+  grid-template-columns: calc(20% - 0.25rem) 60% calc(20% - 0.25rem);
 }
 .ruhv2 .main__left {
   display: grid;
   grid-template-columns: 25% 75%;
-}
-.ruhv2 .main img {
-  width: 45px;
 }
 .ruhv2 .limit-ap {
   display: grid;
@@ -294,6 +283,12 @@
   gap: 0.25rem;
   grid-template-columns: repeat(3, auto);
   justify-content: space-around;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid grey;
+}
+.ruhv2 .userticket__betdata {
+  max-height: 35vh;
+  overflow: auto;
 }
 .ruhv2 .userticket__player {
   font-size: 1.5rem;
@@ -364,11 +359,63 @@
 .ruhv2 .betsplaced .status.refund {
   background-color: #81007a;
 }
+.ruhv2 .betsplaced__table-container {
+  max-height: 60vh;
+  overflow: auto;
+}
 .ruhv2 .codevalidation .modal-dialog {
   max-width: 400px;
 }
 .ruhv2 .codevalidation .modal-body {
   grid-template-columns: 1fr 6rem;
+}
+.ruhv2 .racetrack {
+  height: 60vh;
+  overflow: auto;
+}
+.ruhv2 .racetrack__bycountry {
+  display: grid;
+  grid-template-columns: 25% 60% 15%;
+  align-items: center;
+  justify-items: center;
+  padding: 0 !important;
+  background-color: #444444;
+  box-shadow: inset 0px -150px 40px -112px rgba(0, 0, 0, 0.7);
+  height: 3rem;
+  font-weight: 500;
+}
+.ruhv2 .racetrack__img {
+  width: 2rem;
+}
+.ruhv2 .racetrack__number {
+  border-radius: 1rem;
+  background-color: #646464;
+  width: 1.2rem;
+  text-align: center;
+}
+.ruhv2 .racetrack__event {
+  display: grid;
+  grid-template-columns: 3.7rem 1fr 1.5rem;
+  align-items: center;
+  text-align: center;
+  gap: 0.25rem;
+  padding: 0.25rem;
+}
+.ruhv2 .racetrack__event.title {
+  background-color: #444444;
+}
+.ruhv2 .racetrack__event.race {
+  background-color: #13181b;
+  cursor: pointer;
+  border-bottom: 1px solid grey;
+}
+.ruhv2 .racetrack__event.race:hover {
+  background: linear-gradient(45deg, #81007a, #cd0086);
+}
+.ruhv2 .racetrack__event.race__name {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .ruhv2 .table {
   width: 100%;
@@ -487,4 +534,15 @@
 
 .fade:not(.show) {
   opacity: 0;
+}
+
+/*ACORDEON*/
+.collapsing {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.35s ease;
+}
+
+.collapse:not(.show) {
+  display: none;
 }/*# sourceMappingURL=styles.css.map */

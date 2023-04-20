@@ -206,3 +206,15 @@
     appearance: none; //  Quita la apariencia predeterminada en otros navegadores
 }
 
+@mixin scrollDesing($width,$border-radius,$bg-track,$bg-thumb){
+    ::-webkit-scrollbar {
+        width: $width;
+        border-radius: $border-radius;
+    }
+    ::-webkit-scrollbar-track {
+        background: $bg-track;
+    }       
+    ::-webkit-scrollbar-thumb {
+        background: $bg-thumb;
+    }
+}
