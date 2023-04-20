@@ -167,6 +167,9 @@
 .ruhv2 .btn.race.active {
   background: linear-gradient(45deg, #81007a, #cd0086);
 }
+.ruhv2 .btn.race img {
+  width: 2.8rem;
+}
 .ruhv2 .btn.close {
   width: auto;
   background: transparent;

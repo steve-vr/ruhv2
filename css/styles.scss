@@ -73,6 +73,9 @@
             &.active{
                 background: linear-gradient(45deg, #81007a, #cd0086);;
             }
+            & img{
+                width: 2.8rem;
+            }
         }
 
         &.close{
@@ -110,7 +113,6 @@
             display: grid;
             grid-template-columns: 25% 75%;
         }
-
     }
     .limit-ap{
         display: grid;
