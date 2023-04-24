@@ -515,12 +515,12 @@
   align-items: center;
   border-bottom: 1px solid #000;
 }
-.ruhv2 .race__wps--titles {
+.ruhv2 .race__wps.titles {
   background-color: #000;
   font-size: 15px;
   font-weight: 500;
 }
-.ruhv2 .race__wps--retired {
+.ruhv2 .race__wps.retired {
   grid-template-columns: 31% 5% 22% 14% 8% 6% 5% 5%;
 }
 .ruhv2 .race__container-races {

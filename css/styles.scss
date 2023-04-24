@@ -439,12 +439,12 @@
             padding: 0.4rem 0;
             align-items: center;
             border-bottom: 1px solid #000;
-            &--titles{
+            &.titles{
                 background-color: #000;
                 font-size: 15px;
                 font-weight: 500;
             }
-            &--retired{
+            &.retired{
                 grid-template-columns: 31% 5% 22% 14% 8% 6% 5% 5%;
             }
 
