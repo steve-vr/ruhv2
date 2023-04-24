@@ -8,43 +8,7 @@
 </head>
 <body>
     <style>
-        #keyboard {
-            display: grid;
-            justify-content: center;
-            text-align: center;
-            }
-
-            .row {
-            display: flex;
-            justify-content: center;
-            }
-
-            .key {
-            width: 50px;
-            height: 50px;
-            margin: 5px;
-            border: none;
-            background-color: #ababab;
-            font-size: 24px;
-            cursor: pointer;
-            border-radius: 5px;
-            }
-
-            .uppercase {
-            text-transform: uppercase;
-            }
-
-            .space {
-            width: 150px;
-            }
-
-            .backspace {
-            background-image: url("https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-back-512.png");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            color: transparent;
-            }
+        
     </style>
     <input type="text" id="input-text">
     <div id="keyboard">
@@ -88,25 +52,7 @@
     </div>
     </div>
     <script>
-        const inputText = document.getElementById("input-text");
-        const keys = document.querySelectorAll(".key");
 
-        keys.forEach((key) => {
-            key.addEventListener("click", (e) => {
-                const value = e.target.innerText;
-                switch (value) {
-                case "Backspace": inputText.value = inputText.value.slice(0, -1); break;
-                case "Space": inputText.value += " "; break;
-                default: inputText.value += value; break;
-                }
-            });
-        });
-
-        inputText.addEventListener("keydown", (e) => {
-        if (e.keyCode === 8) {
-            inputText.value = inputText.value.slice(0, -1);
-        }
-        });
     </script>
 </body>
 </html>
