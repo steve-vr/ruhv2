@@ -761,6 +761,9 @@
   background-clip: padding-box;
   border-radius: 0.25rem;
 }
+.ruhv2 .dropdown-menu.show {
+  display: block;
+}
 .ruhv2 .dropdown-item {
   display: block;
   width: 100%;
@@ -773,9 +776,6 @@
   white-space: nowrap;
   background-color: transparent;
   border: 0;
-}
-.ruhv2 .dropdown.show {
-  display: block;
 }
 .ruhv2 .keyboard.dropdown-menu {
   transform: translate(-50%, -50%) !important;

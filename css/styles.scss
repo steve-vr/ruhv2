@@ -706,6 +706,9 @@
             background-color: #444;
             background-clip: padding-box;
             border-radius: 0.25rem;
+            &.show {
+                display: block;
+            }
         }
         &-item {
             display: block;
@@ -719,9 +722,6 @@
             white-space: nowrap;
             background-color: transparent;
             border: 0;
-        }
-        &.show {
-            display: block;
         }
     }
 
