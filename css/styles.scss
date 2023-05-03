@@ -742,17 +742,17 @@
             display: flex;
             gap: 0.5rem;
             justify-content: center;
+            &__numbers{
+                display: grid;
+                grid-template-columns: repeat(3,auto);
+                gap: 0.5rem;
+                justify-items: center;
+                margin: auto;
+            }
         }
         &__info-rider{
             display: flex;
             align-items: center;
-        }
-        &__numbers{
-            display: grid;
-            grid-template-columns: repeat(3,auto);
-            gap: 0.5rem;
-            justify-items: center;
-            margin: auto;
         }
         
     }
