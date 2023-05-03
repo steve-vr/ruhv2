@@ -795,7 +795,7 @@
   gap: 0.5rem;
   justify-content: center;
 }
-.ruhv2 .keyboard__keys__numbers {
+.ruhv2 .keyboard__numbers {
   display: grid;
   grid-template-columns: repeat(3, auto);
   gap: 0.5rem;
