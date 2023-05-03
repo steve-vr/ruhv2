@@ -64,7 +64,37 @@
                 font-size: 18px;
             }
         }
+        &.upcoming{
+            &__title{
+                background-color: #3e3e3e;
+                padding: 0.25rem;
+                font-weight: 500;
+            }
+            &__races{
+                display: grid;
+                grid-template-columns: 50% 50%;
+                background-color: #252525;
+                overflow: auto;
+                max-height: 14vh;
+            }
+            &__race{
+                display: grid;
+                grid-template-columns: 2.5rem 1fr 4rem 5rem;
+                align-items: center;
+                gap: 0.25rem;
+                border: 1px solid #000;
+                height: 3rem;
+                padding: 0.5rem;
+                cursor: pointer;
+                &:hover{
+                    background: linear-gradient(45deg, #81007a, #cd0086);
+                }
+            }
+            &__img{
+                width: 2rem;
+            }
 
+        }
         &.race{
             height: 4rem;
             padding: 0.25rem;
@@ -115,6 +145,42 @@
               justify-content: center;
             }
         }
+        &.key{
+            width: 3rem;
+            height: 3rem;
+            font-size: 20px;
+            &.space {
+                width: 10rem;
+                color: transparent;
+                background-image: url("#{$key-space}");
+                background-repeat: no-repeat;
+                background-size: 25px;
+                background-position: center;
+            }
+            &.backspace {
+                background-image: url("#{$backspace}");
+                background-size: 25px;
+                background-repeat: no-repeat;
+                background-position: center;
+                color: transparent;
+              }
+        }
+        &.filter{
+            padding: 0.25rem;
+            background-color: #444444;
+            border-radius: 0;
+            &::after {
+                display: inline-block;
+                margin-left: 0.4rem;
+                content: "";
+                border-top: 0.35rem solid;
+                border-right: 0.35rem solid transparent;
+                border-bottom: 0;
+                border-left: 0.35rem solid transparent;
+                vertical-align: middle;
+            }
+        }
+
     }
     .ipt{
         &.data{
@@ -362,6 +428,9 @@
                 &:hover{
                     background: linear-gradient(45deg, #81007a, #cd0086);
                 }
+                &.active {
+                    background: linear-gradient(45deg, #81007a, #cd0086);
+                }
             }
             & .name{
                 white-space: nowrap;
@@ -378,6 +447,14 @@
         &__center{
             height: fit-content;
             background-color: #3e3e3e;
+        }
+    }
+    .filter{
+        &__countries{
+            display: grid;
+            justify-content: center;
+            padding: 0.5rem;
+            gap: 0.25rem;
         }
     }
     .race{
@@ -446,6 +523,15 @@
             }
             &.retired{
                 grid-template-columns: 31% 5% 22% 14% 8% 6% 5% 5%;
+                &.no-show{
+                    grid-template-columns: 20.5% 5% 19% 19% 10% 8% 8% 6%;
+                }
+            }
+            &.no-show{
+                grid-template-columns: 10% 10% 5% 19% 19% 10% 8% 8% 6%;
+            }
+            &.no-wps {
+                grid-template-columns: 10% 23% 23% 10% 10% 10% 10%;
             }
 
         }
@@ -506,6 +592,45 @@
                 }
                 &-15{
                     filter: invert(29%) sepia(10%) saturate(2589%) hue-rotate(358deg) brightness(104%) contrast(84%);
+                }
+                &-16{
+                    filter: invert(14%) sepia(86%) saturate(4705%) hue-rotate(292deg) brightness(82%) contrast(98%);
+                }
+                &-17{
+                    filter: invert(54%) sepia(74%) saturate(979%) hue-rotate(360deg) brightness(102%) contrast(105%);
+                }
+                &-18{
+                    filter: invert(43%) sepia(68%) saturate(469%) hue-rotate(163deg) brightness(92%) contrast(89%);
+                }
+                &-19{
+                    filter: invert(30%) sepia(19%) saturate(3555%) hue-rotate(288deg) brightness(104%) contrast(92%);
+                }
+                &-20{
+                    filter: invert(67%) sepia(71%) saturate(387%) hue-rotate(28deg) brightness(90%) contrast(87%);
+                }
+                &-21{
+                    filter: invert(69%) sepia(8%) saturate(2706%) hue-rotate(10deg) brightness(86%) contrast(101%);
+                }
+                &-22{
+                    filter: invert(24%) sepia(97%) saturate(1636%) hue-rotate(251deg) brightness(84%) contrast(90%);
+                }
+                &-23{
+                    filter: invert(97%) sepia(17%) saturate(801%) hue-rotate(292deg) brightness(86%) contrast(90%);
+                }
+                &-24{
+                    filter: invert(17%) sepia(28%) saturate(5130%) hue-rotate(342deg) brightness(89%) contrast(93%);
+                }
+                &-25{
+                    filter: invert(42%) sepia(89%) saturate(337%) hue-rotate(21deg) brightness(97%) contrast(96%);
+                }
+                &-26{
+                    filter: invert(36%) sepia(75%) saturate(4960%) hue-rotate(32deg) brightness(90%) contrast(87%);
+                }
+                &-27{
+                    filter: invert(42%) sepia(65%) saturate(2694%) hue-rotate(154deg) brightness(90%) contrast(87%);
+                }
+                &-28{
+                    filter: invert(29%) sepia(42%) saturate(421%) hue-rotate(159deg) brightness(92%) contrast(92%);
                 }
                 
             }
@@ -568,9 +693,82 @@
         transform: rotate(360deg);
       }
     }
+    //teclado virtual
+    .dropdown{
+        position: relative;
+        &-menu {
+            position: absolute;
+            z-index: 1056;
+            display: none;
+            min-width: 100%;
+            margin: 0;
+            text-align: left;
+            list-style: none;
+            background-color: #444;
+            background-clip: padding-box;
+            border-radius: 0.25rem;
+        }
+        &-item {
+            display: block;
+            width: 100%;
+            padding: 0.25rem 1rem;
+            clear: both;
+            font-weight: 400;
+            color: #212529;
+            text-align: inherit;
+            text-decoration: none;
+            white-space: nowrap;
+            background-color: transparent;
+            border: 0;
+        }
+        &.show {
+            display: block;
+        }
+    }
+
+    .keyboard{
+        &.dropdown-menu{
+            transform: translate(-50%, -50%) !important;
+            top: 80% !important;
+            left: 50% !important;
+            min-width: auto;
+            height: fit-content; 
+        }
+        &__body{
+            display: grid;
+            gap: 0.5rem;
+            padding: 1rem;
+        }
+        &__keys{
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+        &__info-rider{
+            display: flex;
+            align-items: center;
+        }
+        &__numbers{
+            display: grid;
+            grid-template-columns: repeat(3,auto);
+            gap: 0.5rem;
+            justify-items: center;
+            margin: auto;
+        }
+        
+    }
 
 }
 
+
+/*PDF CSS*/
+.gaceta-pdf .modal-dialog{
+    height: calc(100vh - 6rem);
+    max-width: 1200px;
+}
+.gaceta-pdf .modal-content{
+  height: 100%;
+}
 
 //MODAL GLOBAL
 .modal {
@@ -598,24 +796,15 @@
         transform: none;
     }
     &-content {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
         pointer-events: auto;
         background-color: #444444;
-        background-clip: padding-box;
-        border: 1px solid rgba(0,0,0,.2);
         border-radius: 0.3rem;
-        outline: 0;
     }
     &-header {
         display: flex;
         align-items: center;
         justify-content: space-between;
         text-transform:uppercase;
-        color: #d5d5d5;
-        background-color: transparent;
         border-bottom: 1px solid #6d6d6d;
         padding: 1rem;
         font-size: 18px;
@@ -651,15 +840,15 @@
 }
 //SCROOL DESING
 
-            /*ACORDEON*/
-            .collapsing {
-                height: 0;
-                overflow: hidden;
-                transition: height .35s ease;
-            }
-            .collapse:not(.show) {
-                display: none;
-            }
+/*ACORDEON*/
+.collapsing {
+    height: 0;
+    overflow: hidden;
+    transition: height .35s ease;
+}
+.collapse:not(.show) {
+    display: none;
+}
 //TAB PILLS
  
 .tab-content>.tab-pane {
