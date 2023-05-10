@@ -604,7 +604,7 @@
   grid-template-columns: 10% 23% 23% 10% 10% 10% 10%;
 }
 .ruhv2 .race__container-races {
-  max-height: 55vh;
+  max-height: 52vh;
   overflow: auto;
 }
 .ruhv2 .race__nrace {
