@@ -79,7 +79,6 @@
                 width: 2.8rem;
             }
         }
-
         &.nrace{
             width: 2rem;
             padding: 0.25rem;
@@ -148,6 +147,11 @@
                 border-left: 0.35rem solid transparent;
                 vertical-align: middle;
             }
+        }
+        &.bet-delete{
+            background-color: #b50600;
+            padding: 0.25rem 0.5rem;
+            width: auto;
         }
 
     }
@@ -506,9 +510,10 @@
         }
         &__wps{
             display: grid;
-            grid-template-columns: 10% 10% 10% 5% 22% 14% 8% 6% 5% 5%;
+            grid-template-columns: 10% 10% 10% 5% 22% 18% 8% 6% 6%;
             gap: 0.25rem;
             justify-items: center;
+            text-align: center;
             padding: 0.4rem 0;
             align-items: center;
             border-bottom: 1px solid #000;
@@ -518,18 +523,12 @@
                 font-weight: 500;
             }
             &.retired{
-                grid-template-columns: 31% 5% 22% 14% 8% 6% 5% 5%;
-                &.no-show{
-                    grid-template-columns: 20.5% 5% 19% 19% 10% 8% 8% 6%;
-                }
+                text-decoration: line-through;
+                filter: opacity(0.5);
             }
-            &.no-show{
-                grid-template-columns: 10% 10% 5% 19% 19% 10% 8% 8% 6%;
-            }
-            &.no-wps {
-                grid-template-columns: 10% 23% 23% 10% 10% 10% 10%;
-            }
-
+        }
+        &__pick{
+            
         }
         &__container-races{
             max-height: 52vh;
@@ -635,6 +634,39 @@
             position: absolute;
             font-weight: 600;
             margin-bottom: 0.25rem;
+        }
+
+    }
+    .betslip{
+        .ipt{
+            padding: 0.25rem;
+            width: 5rem;
+        }
+        &__bets {
+            max-height: 75vh;
+            min-height: 75vh;
+            background-color: #444444;
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+            overflow: auto;
+        }
+        &__bet{
+            padding: 0.25rem 0.5rem;
+            background-color: #323232;
+        }
+        &__typebet {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-weight: 700;
+        }
+        &__amount--number{
+            background-color: #252525;
+            padding: 0 0.25rem;
+            width: fit-content;
+            min-width: 2.5rem;
+            text-align: center;
         }
 
     }

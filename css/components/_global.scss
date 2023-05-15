@@ -32,6 +32,11 @@
             filter: #{$g-disabled};
         }
     }
+    input{
+        &[type='checkbox']{
+            cursor:pointer;
+        }
+    }
     //en el caso de usar boostrap se hara una lista para de css para evitar alter
 
 }
