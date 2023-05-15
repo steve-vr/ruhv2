@@ -470,15 +470,12 @@
 .ruhv2 .racetrack__event.title {
   background-color: #444444;
 }
-.ruhv2 .racetrack__event.race {
+.ruhv2 .racetrack__event.racetr {
   background-color: #13181b;
   cursor: pointer;
   border-bottom: 1px solid grey;
 }
-.ruhv2 .racetrack__event.race:hover {
-  background: linear-gradient(45deg, #81007a, #cd0086);
-}
-.ruhv2 .racetrack__event.race.active {
+.ruhv2 .racetrack__event.racetr:hover, .ruhv2 .racetrack__event.racetr.active {
   background: linear-gradient(45deg, #81007a, #cd0086);
 }
 .ruhv2 .racetrack__event .name {
