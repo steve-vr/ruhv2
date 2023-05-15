@@ -389,16 +389,14 @@
             padding: 0.25rem;
             &.title{
                 background-color: #444444;
-            }&.race{
+            }&.racetr{
                 background-color: #13181b;
                 cursor:pointer;
                 border-bottom: 1px solid grey;
-                &:hover{
+                &:hover,&.active{
                     background: linear-gradient(45deg, #81007a, #cd0086);
                 }
-                &.active {
-                    background: linear-gradient(45deg, #81007a, #cd0086);
-                }
+    
             }
             & .name{
                 white-space: nowrap;
